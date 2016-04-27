@@ -1,23 +1,18 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
+import highcharts from 'highcharts';
 
 
-import account from './modules/account';
-import chats from './modules/chats';
-import dash from './modules/dash';
-import tabs from './modules/tabs';
+import account from './modules/profile';
 
 let App = angular.module('app', [
   'ionic',
   'ui.router',
-  'tabs',
-  'account',
-  'chats',
-  'dash'
+  'tracker.profile'
 ]);
 
 function config($urlRouterProvider) {
-  $urlRouterProvider.otherwise("/tab/dash");
+  $urlRouterProvider.otherwise("/profile");
 }
 
 App.config(config);
